@@ -62,7 +62,7 @@ function App() {
 function convertToJson(fields) {
   const result = {};
   fields.forEach((field) => {
-    if (!field.key) return;
+    // if (!field.key) return;
 
     if (field.type === 'Nested') {
       result[field.key] = convertToJson(field.children || []);
